@@ -13,6 +13,7 @@ class Bullet(pygame.sprite.Sprite):
         super().__init__(groups)
 
         self.image = surf
+        self.mask = pygame.mask.from_surface(self.image)
         self.rect = self.image.get_rect(center = pos)
 
         self.pos = pygame.math.Vector2(self.rect.center)
